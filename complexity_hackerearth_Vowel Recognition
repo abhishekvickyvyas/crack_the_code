@@ -1,0 +1,44 @@
+Problem statement:-
+link:-
+https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/practice-problems/algorithm/vowel-game-f1a1047c/
+
+Soltion:-
+#include<bits/stdc++.h>
+using namespace std;
+long long int r_count(long long int  len,long long int pos)
+{  //cout<<s.length();
+    
+     
+    return (len-pos)*(pos+1); 
+    
+}
+int main()
+{
+    int  T,i;
+    
+   cin>>T;
+    while(T--)
+    {  
+        string s;
+        long long int len;
+        long long int sum=0;
+        cin>>s;
+       // cout<<s<<"\n";
+        len =s.length();
+    
+        //string substr (size_t pos, size_t len)
+        for(i=0;i<len;i++)
+        {
+          if(s[i]=='u' || s[i]=='o' || s[i]=='i' || s[i]=='e' || s[i]=='a' ||s[i]=='U' || s[i]=='O' || s[i]=='I' || s[i]=='E' || s[i]=='A')
+              sum+=r_count(len,i);         
+        }
+        
+     cout<<sum<<"\n";
+        
+        
+    }
+    
+    
+    
+    
+}
