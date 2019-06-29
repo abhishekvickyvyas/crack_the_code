@@ -1,0 +1,31 @@
+Given a number N, print the number of set bits in the binary representation of this number.
+
+Input: 
+The first contains a single integer T denoting the number of test cases. Each test case contains a single integer N
+
+Output: 
+For each test case, print a single integer denoting the number of set bits in the binary representation of the given N .
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int T,i;
+    cin>>T;
+   for(i=0;i<T;i++)
+    {
+        int N,count=0;
+        cin>>N;
+        while(N)
+        {
+            N&=N-1;
+            count++;
+        }
+    
+    cout<<count<<"\n";    
+    }
+    
+}
+
+https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/
